@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .custom-bg {
+        /*background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;*/
+        background: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ), url('https://source.unsplash.com/x-ghf9LjrVg/1920x1080') no-repeat center center fixed;
+        background-size: cover;
+        opacity: 1;
+        z-index: -1;
+    }
+</style>
+
+<div class="custom-bg m-0 p-0">
+    <div class="bg-light container">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2495.8566496526023!2d4.415366615965733!3d51.2769577353465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c409cef826a767%3A0xe4977c1bcbd0b5ef!2sSteenstraat%2022%2C%202180%20Antwerpen!5e0!3m2!1sen!2sbe!4v1582673430767!5m2!1sen!2sbe"
+                width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="">
+        </iframe>
+
+        <section class="row mt-2">
+            <div class="col-sm-3 mx-auto text-info">
+                <h6>Adress</h6>
+                <p>
+                    BouwJeBlut NV <br />
+                    Steenstraat 22 <br />
+                    2140 Antwerpen
+                </p>
+            </div>
+            <div class="col-sm-3 mx-auto text-info">
+                <h6>Contact</h6>
+                <p>
+                    Telefoon: 078/ 959 59 95 <br>
+                    Fax: 078/ 959 95 59 <br>
+                    e-mail: info@bouwjeblut.be <br>
+                </p>
+            </div>
+        </section>
+
+        <div class="row">
+            <article class="col-sm-12 mx-auto">
+                <div class="container mb-3">
+                    <div class="col-sm-4 mx-auto">
+                        <img src="~/images/contact.jpg" alt="contact" />
+                    </div>
+                    <br />
+
+                    <form asp-controller="home" asp-action="contact" method="post" enctype="text/plain">
+                        <h5>
+                            CONTACT OPNEMEN
+                        </h5>
+                        <p>
+                            Wens je een verkennend gesprek of heb je vragen? Ons team helpt je graag verder.
+                        </p>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Uw Naam *" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Uw Email *" required/>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="tel" class="form-control" placeholder="Uw Telefoonnummer *" required/>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Uw Bericht *" style="width: 100%; height: 150px;" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-outline-success float-left" >Verzend</button>
+                                <button type="reset" class="btn btn-outline-danger float-right">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
