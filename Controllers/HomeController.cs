@@ -9,6 +9,7 @@ using BouwJeBlutNV.Models;
 
 namespace BouwJeBlutNV.Controllers
 {
+    [Route("[controller]/[action]")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -18,6 +19,9 @@ namespace BouwJeBlutNV.Controllers
             _logger = logger;
         }
 
+        [Route("")]
+        [Route("~/")]
+        [Route("~/home")]
         public IActionResult Index()
         {
             return View();
